@@ -1,0 +1,61 @@
+#tooltip {
+    position: absolute;
+    padding: 5px;
+    background-color: rgba(192,192,192,0.7);
+    z-index: 10;
+    display: none;
+}
+
+#formWrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(192,192,192,0.7);
+    display: none;
+}
+
+form {
+    position: absolute;
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: lightgrey;
+    z-index: 12;
+}
+
+#imageProperties, #tagPoints {
+    display: none;
+    border: 1px solid #000;
+    width: 50%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+#tagPoints {
+    max-height: 118px;
+    overflow-y: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td, th {
+   padding: 5px;
+}
+
+th {
+    text-align: left;
+}
+
+.image-wrapper {
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tag Your Photos</title>
+
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <h1>Tag Your Photos</h1>
+    <input type="file" accept="image/*" onchange="loadFile(event)" />
+    <div style="display: flex">
+      <div id="imageProperties">
+        <p>Image Name: <span id="name"></span></p>
+        <p>Dimensions: <span id="height"></span>px X <span id="width"></span>px</p>
+        <p>MIME Type: <span id="type"></span></p>
+      </div>
+      <div id="tagPoints">
+        <table id="tagDisplay">
+          <tr>
+            <th>X Pos</th>
+            <th>Y Pos</th>
+            <th>Description</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="image-wrapper" onmousemove="mouseMovement(event)">
+      <canvas id="canvas" width="600" height="650" style="position: absolute" ></canvas>
+<!--      <canvas id="tip" width=80 height=40 >hello</canvas>-->
+      <span id="tooltip"></span>
+      <div id="formWrapper">
+        <form id="pointName">
+          <label>Description</label><br>
+          <input id="pointNameInput" type="text" /><br>
+          <input type="submit" />
+        </form>
+      </div>
+      <img id="output" width="auto" height="650px" />
+    </div>
+    <!-- <canvas id="canvas" width="690" height="651"
+    style="cursor:crosshair;background:url(http://www.mundoanimalia.com/images/articles/66/58/06/7f6ffaa6bb0b408017b62254211691b5/gallina.jpg)">
+    </canvas> -->
+    <script src="image-mapper.js"></script>
+  </body>
+</html>
